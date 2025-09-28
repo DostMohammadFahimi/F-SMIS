@@ -28,6 +28,7 @@ export default function DashboardLayout({
     "
       >
         <Navbar />
+        {children}
       </div>
     </div>
   );
