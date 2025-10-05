@@ -5,7 +5,7 @@ const Announcements = () => {
         <h1 className="text-xl font-semibold">Announcements</h1>
         <span className="text-xs text-gray-400">View All</span>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 mt-2">
         <div className="bg-lamaSkyLight rounded-md p-4">
           <div className="flex items-center justify-between">
             <h1 className="font-medium">Lorem ipsum dolor sit.</h1>
