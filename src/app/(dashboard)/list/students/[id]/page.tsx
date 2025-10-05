@@ -131,7 +131,7 @@ const SingleStudentPage = () => {
               Student&apos;s Exams
             </Link>
             <Link className="p-3 rounded-md bg-lamaSkyLight" href="/">
-              Student&apos;s Assignments
+              Student&apos;s  Assignments
             </Link>
             <Link className="p-3 rounded-md bg-lamaYellowLight" href="/">
               Student&apos;s Results
