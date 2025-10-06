@@ -1,5 +1,6 @@
 import Announcements from "@/components/Announcements";
 import BigCalender from "@/components/BigCalender";
+import FormModal from "@/components/FormModal";
 import Performance from "@/components/Performance";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,7 +27,27 @@ const TeacherSinglePage = () => {
               />
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4">
-              <h1 className="text-xl font-semibold ">Ali Amiri</h1>
+              <div className="flex items-center gap-4">
+                <h1 className="text-xl font-semibold ">Ali Amiri</h1>
+                <FormModal
+                  table="teacher"
+                  type="update"
+                  data={{
+                    id: 1,
+                    username: "Ali Amiri",
+                    email: "ali@gmail.com",
+                    password: "password",
+                    firstName: "Ali",
+                    lastName: "Amiri",
+                    phone: "+93 730 111 428",
+                    address: "1234 Dasht-e-Barchi ,Kabul ,Afg",
+                    bloodType: "A+",
+                    dateOfBirth: "2001-01-01",
+                    gender: "male",
+                    img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  }}
+                />
+              </div>
               <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
