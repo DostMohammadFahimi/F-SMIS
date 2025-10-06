@@ -1,5 +1,6 @@
 import Announcements from "@/components/Announcements";
 import BigCalender from "@/components/BigCalender";
+import FormModal from "@/components/FormModal";
 import Performance from "@/components/Performance";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,7 +27,27 @@ const SingleStudentPage = () => {
               />
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4">
-              <h1 className="text-xl font-semibold ">Rana hamidi</h1>
+              <div className="flex items-center gap-4">
+                <h1 className="text-xl font-semibold ">Rana hamidi</h1>
+                <FormModal
+                  table="student"
+                  type="update"
+                  data={{
+                    id: 1,
+                    username: "Rana Hamidi",
+                    email: "rana@gmail.com",
+                    password: "password",
+                    firstName: "Rana",
+                    lastName: "Hamidi",
+                    phone: "+93 730 111 428",
+                    address: "1234 Dasht-e-Barchi ,Kabul ,Afg",
+                    bloodType: "A+",
+                    dateOfBirth: "2001-01-01",
+                    gender: "famale",
+                    img: "https://images.pexels.com/photos/5414817/pexels-photo-5414817.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  }}
+                />
+              </div>
               <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
@@ -131,7 +152,7 @@ const SingleStudentPage = () => {
               Student&apos;s Exams
             </Link>
             <Link className="p-3 rounded-md bg-lamaSkyLight" href="/">
-              Student&apos;s  Assignments
+              Student&apos;s Assignments
             </Link>
             <Link className="p-3 rounded-md bg-lamaYellowLight" href="/">
               Student&apos;s Results
