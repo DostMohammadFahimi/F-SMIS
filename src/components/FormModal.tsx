@@ -19,6 +19,9 @@ const SubjectForm = dynamic(() => import("./Forms/SubjectForm"), {
 const ClassForm = dynamic(() => import("./Forms/ClassForm"), {
   loading: () => <h1>Loading...</h1>,
 });
+const LessonForm = dynamic(() => import("./Forms/LessonForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
 
 const forms: {
   [key: string]: (type: "create" | "update", data?: any) => JSX.Element;
@@ -28,6 +31,7 @@ const forms: {
   parent: (type, data) => <ParentForm type={type} data={data} />,
   subject: (type, data) => <SubjectForm type={type} data={data} />,
   class: (type, data) => <ClassForm type={type} data={data} />,
+  lesson: (type, data) => <LessonForm type={type} data={data} />,
 };
 const FormModal = ({
   table,
