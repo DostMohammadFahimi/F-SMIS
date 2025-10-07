@@ -62,7 +62,7 @@ const ParentForm = ({
           label="Email"
           name="email"
           type="email"
-        //   defaultValue={data?.email}
+          defaultValue={data?.email}
           register={register}
           error={errors.email}
         />
@@ -103,14 +103,14 @@ const ParentForm = ({
         <InputField
           label="Phone"
           name="phone"
-        //   defaultValue={data?.phone}
+          defaultValue={data?.phone}
           register={register}
           error={errors.phone}
         />
         <InputField
           label="Address"
           name="address"
-        //   defaultValue={data?.address}
+          defaultValue={data?.address}
           register={register}
           error={errors.address}
         />
