@@ -2,19 +2,20 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
-// import TeacherForm from "./Forms/TeacherForm";
-// import StudentForm from "./Forms/StudentForm";
 
-const TeacherForm = dynamic(()=> import("./Forms/TeacherForm"),{
-    loading:()=> <h1>Loading...</h1>,
-})
+const TeacherForm = dynamic(() => import("./Forms/TeacherForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
 
-const StudentForm = dynamic(()=> import("./Forms/StudentForm"),{
-    loading:()=> <h1>Loading...</h1>,
-})
-const ParentForm = dynamic(()=> import("./Forms/ParentForm"),{
-    loading:()=> <h1>Loading...</h1>,
-})
+const StudentForm = dynamic(() => import("./Forms/StudentForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
+const ParentForm = dynamic(() => import("./Forms/ParentForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
+const SubjectForm = dynamic(() => import("./Forms/SubjectForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
 
 const forms: {
   [key: string]: (type: "create" | "update", data?: any) => JSX.Element;
@@ -22,13 +23,13 @@ const forms: {
   teacher: (type, data) => <TeacherForm type={type} data={data} />,
   student: (type, data) => <StudentForm type={type} data={data} />,
   parent: (type, data) => <ParentForm type={type} data={data} />,
+  subject: (type, data) => <SubjectForm type={type} data={data} />,
 };
 const FormModal = ({
   table,
   type,
   data,
   id,
-
 }: {
   table:
     | "teacher"
