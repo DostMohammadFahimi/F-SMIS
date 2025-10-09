@@ -13,7 +13,7 @@ const schema = z.object({
 });
 
 type Inputs = z.infer<typeof schema>;
-const ExamForm = ({
+const AssignmentForm = ({
   type,
   data,
 }: {
@@ -33,9 +33,9 @@ const ExamForm = ({
   });
   return (
     <form className="flex flex-col gap-8" onSubmit={onSubmit}>
-      <h1 className="text-xl font-semibold">Create a new Exam</h1>
+      <h1 className="text-xl font-semibold">Create a new Assignment</h1>
       <span className="text-xs text-gray-400 font-medium">
-        Exam Information
+        Assignment Information
       </span>
       <div className="flex justify-between flex-wrap gap-4">
         <InputField
@@ -69,4 +69,4 @@ const ExamForm = ({
   );
 };
 
-export default ExamForm;
+export default AssignmentForm;
