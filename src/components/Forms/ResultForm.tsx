@@ -6,14 +6,16 @@ import z from "zod";
 import InputField from "../InputField";
 
 const schema = z.object({
-  subject: z.string().min(1, { message: "className is required!" }),
+  subject: z.string().min(1, { message: "subject is required!" }),
+  student: z.string().min(1, { message: "Studnet is required!" }),
+  score: z.string().min(1, { message: "score is required!" }),
   class: z.string().min(1, { message: "capacity is required!" }),
   teacher: z.string().min(1, { message: "grade is required!" }),
   date: z.string().min(1, { message: "Date is required!" }),
 });
 
 type Inputs = z.infer<typeof schema>;
-const AssignmentForm = ({
+const ResultForm = ({
   type,
   data,
 }: {
@@ -33,9 +35,9 @@ const AssignmentForm = ({
   });
   return (
     <form className="flex flex-col gap-8" onSubmit={onSubmit}>
-      <h1 className="text-xl font-semibold">Create a new Assignment</h1>
+      <h1 className="text-xl font-semibold">Create a new Result</h1>
       <span className="text-xs text-gray-400 font-medium">
-        Assignment Information
+        Result Information
       </span>
       <div className="flex justify-between flex-wrap gap-4">
         <InputField
@@ -46,12 +48,18 @@ const AssignmentForm = ({
           error={errors.subject}
         />
         <InputField
-          label="Class"
-          name="class"
-          type="text"
-          defaultValue={data?.class}
+          label="Student Name"
+          name="student"
+          defaultValue={data?.student}
           register={register}
-          error={errors.class}
+          error={errors.student}
+        />
+        <InputField
+          label="Score"
+          name="score"
+          defaultValue={data?.score}
+          register={register}
+          error={errors.score}
         />
         <InputField
           label="Teacher"
@@ -60,6 +68,14 @@ const AssignmentForm = ({
           defaultValue={data?.teacher}
           register={register}
           error={errors.teacher}
+        />
+        <InputField
+          label="Class"
+          name="class"
+          type="text"
+          defaultValue={data?.class}
+          register={register}
+          error={errors.class}
         />
         <InputField
           label="Date"
@@ -77,4 +93,4 @@ const AssignmentForm = ({
   );
 };
 
-export default AssignmentForm;
+export default ResultForm;
