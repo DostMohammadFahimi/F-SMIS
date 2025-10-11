@@ -10,7 +10,7 @@ type Event = {
   title: string;
   class: string;
   date: string;
-  startime: string;
+  startTime: string;
   endTime: string;
 };
 
@@ -54,7 +54,7 @@ const EventListPage = () => {
       <td className="flex items-center gap-4 p-4">{item.title}</td>
       <td>{item.class}</td>
       <td className="hidden md:table-cell">{item.date}</td>
-      <td className="hidden md:table-cell">{item.startime}</td>
+      <td className="hidden md:table-cell">{item.startTime}</td>
       <td className="hidden md:table-cell">{item.endTime}</td>
       <td>
         <div className="flex items-center gap-2">
