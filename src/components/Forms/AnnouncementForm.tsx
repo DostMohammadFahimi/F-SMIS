@@ -9,12 +9,10 @@ const schema = z.object({
   title: z.string().min(1, { message: "Title is required!" }),
   class: z.string().min(1, { message: "Class is required!" }),
   date: z.string().min(1, { message: "Date is required!" }),
-  startTime: z.string().min(1, { message: "Start Time is required!" }),
-  endTime: z.string().min(1, { message: "End Time is required!" }),
 });
 
 type Inputs = z.infer<typeof schema>;
-const EventForm = ({
+const AnnouncementForm = ({
   type,
   data,
 }: {
@@ -34,9 +32,9 @@ const EventForm = ({
   });
   return (
     <form className="flex flex-col gap-8" onSubmit={onSubmit}>
-      <h1 className="text-xl font-semibold">Create a new Result</h1>
+      <h1 className="text-xl font-semibold">Create a new Announcement</h1>
       <span className="text-xs text-gray-400 font-medium">
-        Result Information
+        Announcement Information
       </span>
       <div className="flex justify-between flex-wrap gap-4">
         <InputField
@@ -61,20 +59,6 @@ const EventForm = ({
           error={errors.date}
           type="date"
         />
-        <InputField
-          label="Start Time"
-          name="startTime"
-          defaultValue={data?.startTime}
-          register={register}
-          error={errors.startTime}
-        />
-        <InputField
-          label="End Time"
-          name="endTime"
-          defaultValue={data?.endTime}
-          register={register}
-          error={errors.endTime}
-        />
       </div>
       <button className="bg-blue-400 text-white p-2 rounded-md">
         {type === "create" ? "Create" : "Update"}
@@ -83,4 +67,4 @@ const EventForm = ({
   );
 };
 
-export default EventForm;
+export default AnnouncementForm;

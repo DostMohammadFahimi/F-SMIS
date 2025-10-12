@@ -34,6 +34,9 @@ const ResultForm = dynamic(() => import("./Forms/ResultForm"), {
 const EventForm = dynamic(() => import("./Forms/EventForm"), {
   loading: () => <h1>Loading...</h1>,
 });
+const AnnouncementForm = dynamic(() => import("./Forms/AnnouncementForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
 
 const forms: {
   [key: string]: (type: "create" | "update", data?: any) => JSX.Element;
@@ -48,6 +51,7 @@ const forms: {
   assignment: (type, data) => <AssignmentForm type={type} data={data} />,
   result: (type, data) => <ResultForm type={type} data={data} />,
   event: (type, data) => <EventForm type={type} data={data} />,
+  announcement: (type, data) => <AnnouncementForm type={type} data={data} />,
 };
 const FormModal = ({
   table,
