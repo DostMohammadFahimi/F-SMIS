@@ -8,7 +8,6 @@ import Image from "next/image";
 type Lesson = {
   id: number;
   name: string;
-  
   subject: string;
   class: string;
   teacher: string;
