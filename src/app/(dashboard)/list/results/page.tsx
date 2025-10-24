@@ -91,9 +91,7 @@ const ResultListPage = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
               <Image src="/sort.png" alt="felter" width={14} height={14} />
             </button>
-            {role === "admin" && (
-              <FormModal table="result" type="create"/>
-            )}
+            {role === "admin" && <FormModal table="result" type="create" />}
           </div>
         </div>
       </div>
