@@ -49,7 +49,7 @@ const ClassForm = ({
           label="Capacity"
           name="capacity"
           type="number"
-            defaultValue={data?.capacity}
+          defaultValue={data?.capacity}
           register={register}
           error={errors.capacity}
         />
@@ -64,7 +64,7 @@ const ClassForm = ({
           label="Supervisor"
           name="supervisor"
           type="text"
-            defaultValue={data?.supervisor}
+          defaultValue={data?.supervisor}
           register={register}
           error={errors.supervisor}
         />
